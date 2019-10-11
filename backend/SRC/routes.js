@@ -20,7 +20,4 @@ routes.get('/dashboard', DashboardController.Show);
 
 routes.post('/spots/:spot_id/bookings', BookingController.store);
 
-module.exports = routes; 
-
-
-teste
+module.exports = routes;
