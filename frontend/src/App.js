@@ -1,21 +1,19 @@
-import React from 'react';
+import React  from 'react';
+
 import './App.css';
 
 import logo from './assets/logo.svg';
 
+import Routes from './routes';
+
 function App() {
+ 
   return (
     <div className="container">
       <img src={logo} alt="AirCnC"/>
 
       <div className="content">
-        <p>
-          texto
-        </p>
-
-        <form>
-          <label htmlFor="email*"E-MAIL ></label>
-        </form>
+        <Routes />
       </div>
     </div>
   );
