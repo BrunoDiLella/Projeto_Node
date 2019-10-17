@@ -15,7 +15,9 @@ export default function New({ history }) {
         return thumbnail ? URL.createObjectURL(thumbnail) : null;    
     }, [thumbnail])
     
-    async function handleSubmit() {
+    async function handleSubmit(event) {
+        event.preventDefault();
+
         const data = new FormData();
         const user_id = localStorage.getItem('user');
 
@@ -52,7 +54,7 @@ export default function New({ history }) {
             id="techs"
             placeholder="Quais tecnologias usam?"
             value={techs}
-            onChange={event => setCompany(event.target.value)}
+            onChange={event => setTechs(event.target.value)}
             />
 
             <label htmlFor="price">VALOR DA DIARIA * <span>(em branco para GRATUITO)</span></label>
